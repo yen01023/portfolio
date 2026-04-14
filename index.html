@@ -48,9 +48,7 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em; color: var(--ink-dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-  .nav-logo-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; display: inline-block; flex-shrink: 0; }
-  .nav-logo-name { line-height: 1.2; }
-  .nav-logo-name br { display: none; }
+  .nav-logo-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; display: inline-block; }
   .nav-links { display: flex; list-style: none; gap: 0.25rem; align-items: center; }
   .nav-links a { text-decoration: none; font-size: 0.85rem; font-weight: 400; color: var(--ink-light); padding: 0.4rem 0.85rem; border-radius: 6px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
   .nav-links a:hover { background: var(--bg-card); color: var(--ink-dark); }
@@ -145,50 +143,20 @@
   footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
   footer a:hover { color: rgba(255,255,255,0.7); }
 
-  /* ── Tablet ≤ 900px ── */
   @media (max-width: 900px) {
-    .hero { padding: calc(var(--nav-h) + 3rem) 2rem 4rem; }
-    .hero-inner { grid-template-columns: 1fr; gap: 2rem; padding-top: 0; align-items: center; }
-    .hero-photo-wrap { max-width: 280px; transform: none; margin: 0 auto 0.5rem; }
-    .hero-badge { bottom: -1rem; right: -0.5rem; }
-    .hero-bio { text-align: left; }
-    .projects-section { padding: 5rem 2rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 0; align-items: center; }
+    .hero-photo-wrap { max-width: 320px; transform: none; margin-bottom: 0; }
     .project-featured { grid-template-columns: 1fr; }
     .project-thumb-lg { aspect-ratio: 16/9; }
     .projects-grid { grid-template-columns: 1fr 1fr; }
-    .contact-outer { padding: 5rem 2rem; }
   }
-
-  /* ── Mobile ≤ 600px ── */
   @media (max-width: 600px) {
-    nav { padding: 0 1rem; justify-content: flex-end; }
-    .nav-logo { display: none; }
-    .nav-links li:nth-child(1),
-    .nav-links li:nth-child(3) { display: none; }
-    .nav-links a { padding: 0.35rem 0.6rem; font-size: 0.8rem; }
-    .hero { padding: calc(var(--nav-h) + 2rem) 1.2rem 3rem; }
-    .hero-name { font-size: clamp(1.9rem, 9vw, 2.6rem); }
-    .hero-name-zh { font-size: 0.95rem; margin-bottom: 1.2rem; }
-    .hero-bio { font-size: 0.93rem; }
-    .skills-wrap { gap: 0.4rem; margin-bottom: 2rem; }
-    .projects-section { padding: 3.5rem 1.2rem; }
-    .section-title { font-size: 1.3rem; }
+    nav { padding: 0 1.2rem; }
+    .nav-links a { padding: 0.35rem 0.55rem; font-size: 0.78rem; }
+    .hero { padding: calc(var(--nav-h) + 2rem) 1.2rem 3.5rem; }
+    .projects-section { padding: 4rem 1.2rem; }
     .projects-grid { grid-template-columns: 1fr; }
-    .contact-outer { padding: 4rem 1.2rem; }
-    .contact-sub { max-width: none; font-size: 0.9rem; }
-    .contact-socials { gap: 1.2rem; margin-top: 2rem; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 1.2rem; }
-  }
-
-  /* ── Small Mobile ≤ 480px ── */
-  @media (max-width: 480px) {
-    .hero-photo-wrap { max-width: 220px; }
-    .hero-badge { font-size: 0.72rem; padding: 0.65rem 0.9rem; right: 0; }
-    .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.14em; }
-    .btn { padding: 0.65rem 1.2rem; font-size: 0.82rem; }
-    .hero-cta { gap: 0.75rem; }
-    .contact-socials { flex-direction: column; align-items: center; gap: 0.9rem; }
-    .contact-title { font-size: 1.6rem; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 
   /* ── Large Project Cards ── */
@@ -285,17 +253,9 @@
 
   @media (max-width: 800px) {
     .pcard { grid-template-columns: 1fr; }
-    .pcard-gallery { min-height: 280px; }
-    .pcard-placeholder { min-height: 280px; }
+    .pcard-gallery { min-height: 260px; }
+    .pcard-placeholder { min-height: 260px; }
     .pcard-body { padding: 2rem; }
-    .pcard-title { font-size: 1.45rem; }
-  }
-  @media (max-width: 480px) {
-    .pcard-gallery { min-height: 220px; }
-    .pcard-placeholder { min-height: 220px; }
-    .pcard-body { padding: 1.5rem; }
-    .pcard-title { font-size: 1.3rem; }
-    .pcard-desc { font-size: 0.88rem; }
   }
 </style>
 </head>
@@ -304,7 +264,7 @@
 <nav>
   <a class="nav-logo" href="#about">
     <span class="nav-logo-dot"></span>
-    <span class="nav-logo-name">Emily<br>Huang</span>
+    Emily Huang
   </a>
   <ul class="nav-links">
     <li><a href="#about">關於</a></li>
